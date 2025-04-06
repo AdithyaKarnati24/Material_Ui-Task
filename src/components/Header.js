@@ -3,7 +3,6 @@ import { AppBar, Toolbar, Paper, IconButton, InputBase, Button } from '@mui/mate
 import { Search, Refresh, Add } from '@mui/icons-material';
 
 const Header = ()=>{
-
 return(
 <AppBar 
 position="static" 
@@ -31,7 +30,7 @@ style={{ backgroundColor: 'white', color: 'black' }}
     />
   </Paper>
 
-  {/* Action Buttons */}
+  {/*  Buttons */}
   <div style={{ flex: 1 }} />
   <Button 
     variant="outlined" 

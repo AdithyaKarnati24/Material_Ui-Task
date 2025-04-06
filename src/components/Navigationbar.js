@@ -49,10 +49,8 @@ return (
             KarnatiAdithya24
           </Typography>
         {/* Main Navigation start */}
-        <List>
-          <ListItem button style={{ color:'white'
- 
-         }}>
+        <List >
+          <ListItem button style={{ color:'white'}}>
             <ListItemIcon style={{ color: 'white' }}><Folder /></ListItemIcon>
             <ListItemText primary="Repositories" />
           </ListItem>

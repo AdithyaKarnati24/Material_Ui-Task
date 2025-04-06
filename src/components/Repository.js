@@ -22,22 +22,23 @@ return (
     </Typography>
 
     {repositories.map((repo, index) => (
-      <Paper key={index} elevation={0} style={{ padding: '15px', marginBottom: '10px',border:'0.5px solid',borderColor:'lightgrey' }}>
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-          {/* repository namr,type */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: '30px' }}>
-            <Typography variant="subtitle1" style={{ fontWeight: 'bold' }}>
-              {repo.name}
-            </Typography>
-            <Chip label={repo.type} size="small" style={{ color: 'blue',marginLeft:'20px' }} />
-          </div>
-        </div>
-
-        {/* Repository tech,size,updated*/}
-        <div style={{ display: 'flex', gap: '15px', marginTop: '5px' }}>
+      <Paper key={index} elevation={1} style={{ padding: '15px', marginBottom: '10px',border:'0.5px solid',borderColor:'lightgrey' }}>
+       <div style={{
+         display: 'flex',
+         alignItems: 'center'  }}>
+       <Typography variant="subtitle1" style={{
+         fontWeight: 'bold',
+         width: '200px', 
+         overflow: 'hidden',
+         textOverflow: 'ellipsis',
+         whiteSpace: 'nowrap'  }}>
+         {repo.name}    </Typography>
+      <Chip label={repo.type} size="small" style={{ color: 'blue', marginLeft: '16px' }} />
+     </div>
+        <div style={{ display: 'flex', gap: '20px', marginTop: '5px' }}>
           <Typography variant="body2">{repo.tech} ● </Typography>
-          <StorageIcon style={{ fontSize: 15, color: 'grey' }} /> 
-          <Typography variant="body2" >{repo.size}</Typography>
+          <Typography variant="body2" ><StorageIcon style={{ fontSize: 14, color: 'grey'}} /> 
+          {repo.size}</Typography>
           <Typography variant="body2" color="textSecondary">Updated {repo.updated}</Typography>
         </div>
       </Paper>
